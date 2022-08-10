@@ -1,0 +1,5 @@
+.trending{
+    display: flex;   /* Arrange in horinzontal  */
+    flex-wrap: wrap;  /* it will display remaining items in next line, it will not overflow the items in one line */
+    justify-content: space-around;
+}

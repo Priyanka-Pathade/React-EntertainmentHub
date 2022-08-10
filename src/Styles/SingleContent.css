@@ -1,0 +1,43 @@
+.media {
+    display: flex;
+    /* direction is column bcoz styling is for all items, title date media type should be in column direction */
+    flex-direction: column;
+    width: 200px;
+    padding: 5px;
+    margin: 5px 0;
+    background-color: #282c34;
+    border-radius: 10px;
+    position: relative;
+    font-family: "Montserrat", sans-serif;
+  }
+  /* if we hover over each item */
+  .media:hover {
+    background-color: white;
+    color: black;
+  }
+  
+  /* if screen is less than 550px then */
+  @media (max-width: 550px) {
+    .media {
+      width: 46%;
+    }
+  }
+  /* border for image */
+  .poster {
+    border-radius: 10px;
+  }
+  
+  .title {
+    width: 100%;
+    text-align: center;
+    font-size: 17px;
+    padding: 8px 0;
+  }
+  
+  .subTitle {
+    display: flex;   /* so that it's on single line */
+    flex-direction: row;
+    justify-content: space-between;
+    /* padding: 0 2px; */
+    padding-bottom: 3px;
+  }

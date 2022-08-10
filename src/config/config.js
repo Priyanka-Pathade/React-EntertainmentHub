@@ -1,6 +1,8 @@
 //image sizes for tmdb
-export const img_300 = "https://image.tmdb.org/t/p/w300";
-export const img_500 = "https://image.tmdb.org/t/p/w500";
+//whenever we want to display image we just have to append this strings to src of image
+export const img_300 = "https://image.tmdb.org/t/p/w300";       //image with size of 300px
+export const img_500 = "https://image.tmdb.org/t/p/w500";       //image with size of 500px
+
 
 // contentModal and singleContent
 export const unavailable =

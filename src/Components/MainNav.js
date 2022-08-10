@@ -25,10 +25,10 @@ export default function SimpleBottomNavigation() {
   
   return (
     <Box sx={{ 
-        width: 500,
+        width: '100%',
         position:'fixed',
         bottom:0,
-        backgroundColor:'black',
+        backgroundColor:'success.dark',
         zIndex:100 }}>
       <BottomNavigation
         showLabels
