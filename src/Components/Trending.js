@@ -11,11 +11,12 @@ function Trending() {
 
     const fetchTrending = async ()=>{
         const{data} =await axios.get(`https://api.themoviedb.org/3/trending/all/day?api_key=e49ad01b738b930fe205087c472133c5&page=${page}`);
-        console.log(data)
+        // console.log(data)
         setContent(data.results);
     }
     useEffect(() => {
       fetchTrending();
+     // eslint-disable-next-line
     },[page])
     
   return (
@@ -33,7 +34,7 @@ function Trending() {
             )
         }
       </div>
-      <CustomPagination setPage={setPage} />
+      <CustomPagination setPage={setPage} numOfPages={10} />
     </div>
   )
 }

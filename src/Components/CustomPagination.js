@@ -1,7 +1,6 @@
 import React from 'react'
 import Pagination from '@mui/material/Pagination';
-import { createTheme, ThemeProvider, styled } from '@mui/material/styles';
-import { orange } from '@material-ui/core/colors';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 //use this in ThemeProvider
 const darkTheme = createTheme({
@@ -26,7 +25,7 @@ function CustomPagination(props) {
         marginTop: 10,
       }}>
         <ThemeProvider theme={darkTheme}>
-            <Pagination count={10} 
+            <Pagination count={props.numOfPages} 
             onChange={(e)=>handlePageChange(e.target.textContent)}
             hideNextButton hidePrevButton color='primary'
             />
