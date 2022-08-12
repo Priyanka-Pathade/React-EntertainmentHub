@@ -13,7 +13,7 @@ function Series() {
   const [selectedGenres, setSelectedGenres] = useState([]);
   const genreforURL = useGenre(selectedGenres);
 
-  const fetchSeries = async ()=>{
+  const fetchMovies = async ()=>{
     const {data} = await axios.get(
       `https://api.themoviedb.org/3/discover/tv?api_key=e49ad01b738b930fe205087c472133c5&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}&with_genres=${genreforURL}`);
       setContent(data.results);
@@ -21,7 +21,7 @@ function Series() {
       // console.log(data)
   }
   useEffect(() => {
-    fetchSeries();
+    fetchMovies();
     //getting missing dependencies warning so add below line
     // eslint-disable-next-line
   },[page,genreforURL])
