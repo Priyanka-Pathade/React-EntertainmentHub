@@ -9,6 +9,7 @@ import '../Styles/SingleContent.css'
 import { img_300, img_500,unavailable } from '../config/config.js';
 import YouTubeIcon from "@material-ui/icons/YouTube";
 import '../Styles/ContentModal.css';
+import Carousel from './Carousel.js';
 
 const style = {
   position: 'absolute',
@@ -105,7 +106,10 @@ export default function ContentModal({children,media_type,id}) {
                             <span className="ContentModal__description">
                                 {content.overview}
                             </span>
-                            <div></div>
+                            {/* carousel */}
+                            <div>
+                                <Carousel media_type={media_type} id={id} />
+                            </div>
                             <Button
                                 variant="contained"
                                 startIcon={<YouTubeIcon />}

@@ -1,0 +1,12 @@
+/* for each item, name image will be there and it should be display in column direction */
+.carouselItem {
+    display: flex;
+    flex-direction: column;
+    object-fit: contain;   /* so it doesnot get stretched */
+    padding: 10px;
+  }
+  .carouselItem__img {
+    border-radius: 10px;
+    margin-bottom: 5px;
+    box-shadow: 0px 0px 5px black;
+  }
