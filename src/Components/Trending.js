@@ -10,9 +10,13 @@ function Trending() {
     const [content, setContent] = useState([]);
 
     const fetchTrending = async ()=>{
+      try{
         const{data} =await axios.get(`https://api.themoviedb.org/3/trending/all/day?api_key=e49ad01b738b930fe205087c472133c5&page=${page}`);
         // console.log(data)
         setContent(data.results);
+      }catch(error){
+        console.log(error)
+      }
     }
     useEffect(() => {
       fetchTrending();

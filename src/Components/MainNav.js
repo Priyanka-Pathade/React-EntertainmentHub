@@ -8,8 +8,10 @@ import TVIcon from '@mui/icons-material/Tv';
 import WhatshotIcon from '@mui/icons-material/Whatshot';
 import { useState,useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
+import { makeStyles } from '@material-ui/core/styles';
 
 export default function SimpleBottomNavigation() {
+  
     //in useState it states 0-trending, 1-movies, 2-Tv series, 3-search
   const [value, setValue] = useState(0);
   const history = useHistory();
@@ -28,19 +30,19 @@ export default function SimpleBottomNavigation() {
         width: '100%',
         position:'fixed',
         bottom:0,
-        backgroundColor:'success.dark',
         zIndex:100 }}>
       <BottomNavigation
         showLabels
         value={value}
+        style={{backgroundColor:"#2d313a"}}
         onChange={(event, newValue) => {
           setValue(newValue);
         }}
       >
-        <BottomNavigationAction label="Trending" icon={<WhatshotIcon />} style={{color:"black"}} />
-        <BottomNavigationAction label="Movies" icon={<MovieIcon />} style={{color:"black"}} />
-        <BottomNavigationAction label="TV Series" icon={<TVIcon />} style={{color:"black"}}/>
-        <BottomNavigationAction label="Nearby" icon={<SearchIcon />} style={{color:"black"}}/>
+        <BottomNavigationAction label="Trending" icon={<WhatshotIcon />} style={{color:"white"}} />
+        <BottomNavigationAction label="Movies" icon={<MovieIcon />} style={{color:"white"}} />
+        <BottomNavigationAction label="TV Series" icon={<TVIcon />} style={{color:"white"}}/>
+        <BottomNavigationAction label="Nearby" icon={<SearchIcon />} style={{color:"white"}}/>
 
       </BottomNavigation>
     </Box>
